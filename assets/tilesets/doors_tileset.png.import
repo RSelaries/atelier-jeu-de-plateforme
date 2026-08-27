@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccaff0b1u57w"
-path="res://.godot/imported/tilemap-characters_packed.png-7bb2aa301556de9fd48325c472bcf712.ctex"
+uid="uid://wrjcjamynq3s"
+path="res://.godot/imported/doors_tileset.png-84b4a565419a490d16ae086f38692636.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/tilemap-characters_packed.png"
-dest_files=["res://.godot/imported/tilemap-characters_packed.png-7bb2aa301556de9fd48325c472bcf712.ctex"]
+source_file="res://assets/tilesets/doors_tileset.png"
+dest_files=["res://.godot/imported/doors_tileset.png-84b4a565419a490d16ae086f38692636.ctex"]
 
 [params]
 
