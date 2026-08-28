@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b464xtqru8sqx"]
+
+[ext_resource type="PackedScene" uid="uid://dmjxoa6pymfpx" path="res://player/player.tscn" id="1_mi4ay"]
+[ext_resource type="Script" uid="uid://dylkj5uonjxrw" path="res://player/player_camera.gd" id="2_pqqg8"]
+
+[node name="Level2" type="Node2D" unique_id=1915760321]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1165119450]
+offset_left = -414.0
+offset_top = -284.0
+offset_right = 1290.0
+offset_bottom = 289.0
+color = Color(0.2784314, 0.1764706, 0.23529412, 1)
+
+[node name="PlayerLayer" type="TileMapLayer" parent="." unique_id=1763994673]
+
+[node name="Player" parent="." unique_id=262182340 instance=ExtResource("1_mi4ay")]
+
+[node name="TestCam" type="Camera2D" parent="Player" unique_id=2098333874]
+limit_left = -320
+limit_top = -180
+limit_right = 320
+limit_bottom = 180
+limit_smoothed = true
+editor_draw_limits = true
+script = ExtResource("2_pqqg8")

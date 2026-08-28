@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://fg4wihuowdfi"]
+
+[ext_resource type="Script" uid="uid://bov4yl2h8j1sb" path="res://objects/coin/coin.gd" id="1_gp412"]
+[ext_resource type="Script" uid="uid://ds64dw34sry7o" path="res://scripts/persistance/persistance_key.gd" id="2_2clvd"]
+[ext_resource type="Texture2D" uid="uid://dtldrc554vk85" path="res://assets/textures/coin.tres" id="3_2clvd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qd8cd"]
+radius = 4.0
+
+[node name="Coin" type="Area2D" unique_id=1372478395]
+script = ExtResource("1_gp412")
+
+[node name="PersistanceKey" type="Node" parent="." unique_id=1738018277]
+script = ExtResource("2_2clvd")
+persistant_var_name = &"picked_up"
+metadata/_custom_type_script = "uid://ds64dw34sry7o"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=559363067]
+texture = ExtResource("3_2clvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=504723955]
+shape = SubResource("CircleShape2D_qd8cd")
