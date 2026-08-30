@@ -12,4 +12,4 @@ func _init() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		SceneManager.change_scene_to_file(next_level)
+		SceneManager.change_scene_to_file(next_level, transition_parameters)

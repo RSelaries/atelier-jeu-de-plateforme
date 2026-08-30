@@ -43,10 +43,6 @@ font_color = Color(0.8039216, 0.76862746, 0.7137255, 1)
 [node name="Chest" type="Area2D" unique_id=783538692]
 script = ExtResource("1_3eoae")
 
-[node name="PersistanceKey" type="Node" parent="." unique_id=1493201929]
-script = ExtResource("3_08cju")
-persistant_var_name = &"opened"
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=21108777]
 sprite_frames = SubResource("SpriteFrames_qd8cd")
 animation = &"closed"
@@ -65,3 +61,7 @@ text = "ouvrir"
 label_settings = SubResource("LabelSettings_08cju")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PersistanceKey" type="Node" parent="." unique_id=1493201929]
+script = ExtResource("3_08cju")
+persistant_var_name = &"opened"

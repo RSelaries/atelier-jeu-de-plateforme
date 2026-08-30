@@ -2,10 +2,31 @@
 
 [ext_resource type="Texture2D" uid="uid://bgnru2ugsrx56" path="res://assets/textures/dither_gradient.png" id="1_5hbt6"]
 [ext_resource type="Script" uid="uid://cgfwu3vhhb8jx" path="res://menus/pause_menu/pause_menu.gd" id="1_rd7dy"]
+[ext_resource type="Texture2D" uid="uid://dm8uiea0fxthf" path="res://assets/tilesets/interface_tileset.png" id="3_qd56w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4q5nv"]
 atlas = ExtResource("1_5hbt6")
 region = Rect2(12, 0, 4, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4s7ec"]
+atlas = ExtResource("3_qd56w")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3nas"]
+atlas = ExtResource("3_qd56w")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpjwo"]
+atlas = ExtResource("3_qd56w")
+region = Rect2(112, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xotp6"]
+atlas = ExtResource("3_qd56w")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd56w"]
+atlas = ExtResource("3_qd56w")
+region = Rect2(64, 32, 16, 16)
 
 [node name="PauseMenu" type="Node" unique_id=1042132819]
 process_mode = 3
@@ -13,7 +34,7 @@ script = ExtResource("1_rd7dy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1163183221]
 process_mode = 2
-layer = 90
+layer = 110
 visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1053278131]
@@ -38,15 +59,42 @@ custom_minimum_size = Vector2(112, 0)
 layout_mode = 2
 theme_override_constants/separation = 5
 
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=894079155]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="P" type="TextureRect" parent="CanvasLayer/CenterContainer/VBoxContainer/HBoxContainer" unique_id=968129947]
+layout_mode = 2
+texture = SubResource("AtlasTexture_4s7ec")
+
+[node name="A" type="TextureRect" parent="CanvasLayer/CenterContainer/VBoxContainer/HBoxContainer" unique_id=2013422125]
+layout_mode = 2
+texture = SubResource("AtlasTexture_l3nas")
+
+[node name="U" type="TextureRect" parent="CanvasLayer/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1232353376]
+layout_mode = 2
+texture = SubResource("AtlasTexture_vpjwo")
+
+[node name="S" type="TextureRect" parent="CanvasLayer/CenterContainer/VBoxContainer/HBoxContainer" unique_id=20338288]
+layout_mode = 2
+texture = SubResource("AtlasTexture_xotp6")
+
+[node name="E" type="TextureRect" parent="CanvasLayer/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1235088389]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qd56w")
+
 [node name="ResumeBtn" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=443204003]
 layout_mode = 2
 text = "REPRENDRE"
 
 [node name="OptionsBtn" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1629039934]
+visible = false
 layout_mode = 2
 text = "OPTIONS"
 
 [node name="QuitBtn" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=723353152]
+visible = false
 layout_mode = 2
 text = "QUITTER"
 

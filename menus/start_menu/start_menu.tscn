@@ -110,6 +110,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="MarginContainer3" type="MarginContainer" parent="CenterContainer/VBoxContainer" unique_id=1385218067]
+visible = false
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/MarginContainer3" unique_id=1667250994]
@@ -151,6 +152,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/VBoxContainer" unique_id=1562518276]
+visible = false
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/MarginContainer2" unique_id=169530301]

@@ -1,6 +1,8 @@
 extends Area2D
 
 
+@export var item: String = "emerald"
+
 var opened: bool = false
 var player_inside: bool = false
 var player: Player
@@ -43,5 +45,5 @@ func _unhandled_input(event: InputEvent) -> void:
 func open_chest() -> void:
 	opened = true
 	animated_sprite_2d.play(&"opened")
-	player.gain_item("emerald")
+	player.gain_item(item)
 	hint_label.hide()

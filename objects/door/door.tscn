@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bltbi7afwqkc3"]
+
+[ext_resource type="Script" uid="uid://s04ae1lwbmol" path="res://objects/door/door.gd" id="1_0i0ho"]
+[ext_resource type="Texture2D" uid="uid://wrjcjamynq3s" path="res://assets/tilesets/doors_tileset.png" id="1_lu671"]
+[ext_resource type="Script" uid="uid://ds64dw34sry7o" path="res://scripts/persistance/persistance_key.gd" id="3_y765d"]
+[ext_resource type="FontFile" uid="uid://b3i4s3mvn682k" path="res://assets/fonts/tiny5.ttf" id="4_ln868"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i0ho"]
+atlas = ExtResource("1_lu671")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lu671"]
+atlas = ExtResource("1_lu671")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y765d"]
+atlas = ExtResource("1_lu671")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln868"]
+atlas = ExtResource("1_lu671")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qd8cd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i0ho")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu671")
+}],
+"loop": 1,
+"name": &"locked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y765d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ln868")
+}],
+"loop": 0,
+"name": &"opening",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qd8cd"]
+size = Vector2(10, 13)
+
+[sub_resource type="LabelSettings" id="LabelSettings_58wfd"]
+font = ExtResource("4_ln868")
+font_size = 8
+font_color = Color(0.8039216, 0.76862746, 0.7137255, 1)
+
+[node name="Door" type="Area2D" unique_id=1401394882]
+script = ExtResource("1_0i0ho")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026865910]
+sprite_frames = SubResource("SpriteFrames_qd8cd")
+animation = &"opening"
+frame = 1
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=354982302]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_qd8cd")
+
+[node name="PersistanceKey" type="Node" parent="." unique_id=2127782282]
+script = ExtResource("3_y765d")
+persistant_var_name = &"locked"
+metadata/_custom_type_script = "uid://ds64dw34sry7o"
+
+[node name="HintLabel" type="Label" parent="." unique_id=1753013445]
+offset_left = -24.0
+offset_top = -20.0
+offset_right = 24.0
+offset_bottom = -11.0
+text = "vérouillé"
+label_settings = SubResource("LabelSettings_58wfd")
+horizontal_alignment = 1
+vertical_alignment = 1

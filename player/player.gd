@@ -15,6 +15,7 @@ static var coin_amount: int = 0:
 
 const EMERALD_SPRITE = preload("res://assets/textures/emerald.tres")
 const COIN_SPRITE = preload("res://assets/textures/coin.tres")
+const KEY = preload("res://assets/textures/key.tres")
 const ITEMS: Dictionary[String, Dictionary] = {
 	"emerald": {
 		"texture": EMERALD_SPRITE,
@@ -24,6 +25,9 @@ const ITEMS: Dictionary[String, Dictionary] = {
 		"texture": COIN_SPRITE,
 		"coin_amount": 1,
 	},
+	"key": {
+		"texture": KEY,
+	}
 }
 
 
@@ -45,8 +49,11 @@ var in_animation: bool = false
 @onready var key_texture: TextureRect = %KeyTexture
 
 
-func _ready() -> void:
+func _enter_tree() -> void:
 	reference = self
+
+
+func _ready() -> void:
 	_update_coins()
 	_update_keys()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -129,8 +136,8 @@ func _update_coins() -> void:
 
 func _update_keys() -> void:
 	if key_amount_label:
-		key_amount_label.text = "%03d" % key_amount
-		key_amount_label.visible = key_amount > 0
+		key_amount_label.text = "%d" % key_amount
+		key_amount_label.visible = key_amount > 1
 		key_texture.visible = key_amount > 0
 
 
