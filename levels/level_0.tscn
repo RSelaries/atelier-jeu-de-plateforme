@@ -35,7 +35,7 @@ metadata/_edit_lock_ = true
 
 [node name="Inputs" type="TileMapLayer" parent="." unique_id=318635552]
 modulate = Color(0.47843137, 0.26666668, 0.2901961, 1)
-tile_map_data = PackedByteArray("AAD8////AQAfAAYAAAD9////AQAgAAYAAAD+////AQAhAAYAAADy//v/AQAeAAQAAADy//7/AQATAAQAAADx//z/AQAhAAQAAADx////AQARAAIAAADy//z/AQAgAAQAAADy////AQATAAMAAADz//z/AQAfAAQAAADz////AQAUAAMAAAAbAP7/AQAfAAYAAAAcAP7/AQAgAAYAAAAdAP7/AQAhAAYAAAAeAP7/AQAOABUAAAAfAP7/AQAgAAQAAAA=")
+tile_map_data = PackedByteArray("AAD8////AQAfAAYAAAD9////AQAgAAYAAAD+////AQAhAAYAAADy//v/AQAeAAQAAADy//7/AQATAAQAAADx//z/AQAhAAQAAADx////AQARAAIAAADy//z/AQAgAAQAAADy////AQATAAMAAADz//z/AQAfAAQAAADz////AQAUAAMAAAAbAP7/AQAgAAQAAAAcAP7/AQAOABUAAAAdAP7/AQAfAAYAAAAeAP7/AQAgAAYAAAAfAP7/AQAhAAYAAAA=")
 tile_set = ExtResource("1_yi3jx")
 
 [node name="BackgroundLayer" type="TileMapLayer" parent="." unique_id=1097064883]
