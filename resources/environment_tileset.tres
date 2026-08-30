@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://h81kgu8m3k82" path="res://assets/tilesets/terrain_tileset.png" id="1_b3t44"]
 [ext_resource type="Texture2D" uid="uid://r7qcdlvsbone" path="res://assets/tilesets/objects_tileset.png" id="2_1xams"]
-[ext_resource type="PackedScene" uid="uid://dxjxg7gne5h1o" path="res://objects/spikes/spikes.tscn" id="3_1xams"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqclh"]
 texture = ExtResource("1_b3t44")
@@ -572,12 +571,7 @@ texture = ExtResource("2_1xams")
 6:8/0 = 0
 6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_uy10g"]
-resource_name = "Scenes"
-scenes/1/scene = ExtResource("3_1xams")
-
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_jqclh")
 sources/1 = SubResource("TileSetAtlasSource_qebqe")
-sources/2 = SubResource("TileSetScenesCollectionSource_uy10g")
