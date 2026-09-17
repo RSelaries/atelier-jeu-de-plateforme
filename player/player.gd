@@ -6,11 +6,11 @@ static var reference: Player
 static var key_amount: int = 0:
 	set(value):
 		key_amount = value
-		reference._update_keys()
+		if reference: reference._update_keys()
 static var coin_amount: int = 0:
 	set(value):
 		coin_amount = value
-		reference._update_coins()
+		if reference: reference._update_coins()
 
 
 const EMERALD_SPRITE = preload("res://assets/textures/emerald.tres")

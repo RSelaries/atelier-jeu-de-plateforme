@@ -1,10 +1,51 @@
 [gd_scene format=3 uid="uid://ivfm3xrielle"]
 
-[ext_resource type="Script" uid="uid://biwbluwhown45" path="res://scripts/custom_nodes/level.gd" id="1_fwt2v"]
-[ext_resource type="PackedScene" uid="uid://bltbi7afwqkc3" path="res://objects/door/door.tscn" id="2_b15rf"]
+[ext_resource type="Script" uid="uid://dqwejftjndva4" path="res://levels/level_4.gd" id="1_fwt2v"]
 
-[node name="Level4" type="Node2D" unique_id=1405246737]
+[node name="Level4" type="Control" unique_id=401701802]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_fwt2v")
-metadata/_custom_type_script = "uid://biwbluwhown45"
 
-[node name="LevelEntrance" parent="." unique_id=1401394882 instance=ExtResource("2_b15rf")]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1938159447]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2784314, 0.1764706, 0.23529412, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=298765616]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -20.0
+offset_right = 48.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1650099073]
+layout_mode = 2
+text = "C'est fini !"
+
+[node name="GoldCount" type="Label" parent="VBoxContainer" unique_id=322310975]
+layout_mode = 2
+text = "Vous avez trouvé
+%d pièces !"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=365193330]
+layout_mode = 2
+text = "Recommencer"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

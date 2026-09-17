@@ -138,10 +138,9 @@ tween_resource = SubResource("Resource_lsnkt")
 draw_limits = true
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
-[node name="PhantomCamera2D" type="Node2D" parent="." unique_id=154204479 node_paths=PackedStringArray("follow_target")]
+[node name="PhantomCamera2D" type="Node2D" parent="." unique_id=154204479]
 position = Vector2(-16, 16)
 script = ExtResource("3_bmgug")
-follow_target = NodePath("../Player")
 tween_resource = SubResource("Resource_8l0e1")
 tween_on_load = false
 draw_limits = true

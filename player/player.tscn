@@ -123,10 +123,10 @@ anchor_right = 1.0
 offset_left = -56.0
 offset_bottom = 48.0
 grow_horizontal = 0
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PlayerUI" unique_id=853022265]
 layout_mode = 2
@@ -175,6 +175,7 @@ label_settings = SubResource("LabelSettings_g6k8r")
 [node name="PauseMenu" parent="." unique_id=1042132819 instance=ExtResource("3_g1dw6")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1327937108]
+visible = false
 top_level = true
 limit_left = -320
 limit_top = -180
